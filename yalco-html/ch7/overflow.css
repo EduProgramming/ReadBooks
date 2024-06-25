@@ -1,0 +1,15 @@
+div {
+  margin-bottom: 2rem;
+}
+
+.overflow-div {
+  width: 500px;
+  height: 300px;
+  overflow: scroll;
+}
+
+.overflow-div2 {
+  width: 500px;
+  height: 300px;
+  overflow: hidden scroll;
+}

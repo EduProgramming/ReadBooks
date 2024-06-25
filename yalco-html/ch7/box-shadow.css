@@ -1,0 +1,40 @@
+div {
+  width: 200px;
+  height: 125px;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 16px;
+  margin: 2rem;
+}
+
+.box1 {
+  box-shadow: 4px 4px gray;
+}
+
+.box2 {
+  box-shadow: 4px 4px 12px gray;
+}
+
+.box3 {
+  box-shadow: 4px 4px 0 8px gray;
+}
+
+.box4 {
+  box-shadow: 16px 16px 0 -8px gray;
+}
+
+.box5 {
+  box-shadow: 4px 4px 4px 2px gray;
+}
+
+.box6 {
+  box-shadow: inset 4px 4px gray;
+}
+
+.box7 {
+  box-shadow: inset 4px 4px 12px gray;
+}
+
+.box8 {
+  box-shadow: inset 4px 4px 4px 4px gray;
+}
