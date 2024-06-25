@@ -1,0 +1,25 @@
+div {
+  width: 300px;
+  height: 200px;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.box1 {
+  background: linear-gradient(gold, tomato);
+}
+
+.box2 {
+  background: linear-gradient(45deg, skyblue, slateblue);
+}
+
+.box3 {
+  background: linear-gradient(red 0%, white 40%, blue 100%);
+}
+
+.box4 {
+  background: linear-gradient(217deg, red, transparent 70%),
+    linear-gradient(127deg, lime, transparent 70%),
+    linear-gradient(336deg, blue, transparent 70%);
+}
