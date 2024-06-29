@@ -1,61 +1,66 @@
-# Ch10. CSS
+# Ch10. HTML 심화
 
-## Flex
+## HTML HEAD TAG 정보
 
-https://showcases.yalco.kr/html-css/02-11/01.html
+### DOCTYPE
 
-https://flexboxfroggy.com/#ko
+: HTML문서가 어떤 형식과 버전으로 되었는지 명시
 
-flex와 inline-flex의 차이는 block과 inline의 차이 정도라고 생각하면 된다.
+`<!DOCTYPE html>` 최신 버전 HTML5로 작성되었다는 뜻
 
-### justify-content
+### meta 태그
 
-- flex-start
-- center
-- flex-end
-- space-between
-- space-around : 각 내부 요소의 양쪽에 일정한 크기의 빈 공간을 배치
-- space-evenly : 모든 빈 공간의 크기를 고르게 지정
+#### charset
 
-start와 end를 작성해도 되지만 reverse기능을 호라용하기 위해서 flex-start를 권장.
+캐릭터셋으로 해당 페이지에 사용된 문자들을 어떤 방식으로 읽을지를 명시.
 
-### align-items
+문자 인코딩 방식이 어떤 것인지를 지정하는 역할
 
-- stretch : (default)수직 축 방향을 꽉 채움
-- flex-start : Y축 상단
-- center : 중앙
-- flex-end : Y축 하단
+```html
+<meta charset="UTF-8" />
 
-### flex-direction
+<!-- 과거 형식 -->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+```
 
-내부 자식 요소를 어느 축을 기준으로 정렬할지 결정
+`html lang="ko"`는 검색 엔진이나 스크린 리더에 이 웹사이트가 어떤 언어인지를 알려주는 역할.
 
-- row (default)
-- row-reverse
-- column
-- column-reverse
+#### IE관련 호환 정보
 
-reverse를 사용하면 flex-start와 flex-end 순서도 뒤바뀐다.
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+```
 
-### flex-wrap
+인터넷 익스플로러에서 열었을 때 엣지로 명시
 
-- nowrap (default)
-- wrap : 내부 요소가 부모 요소를 넘어서면 줄바꿈
+#### 뷰포트 관련 정보
 
-### align-content
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
 
-flex-wrap: wrap일 때 차이가 발생함.
+### Open Graph 정보
 
-- align-items는 줄 간의 여백 있음.
-- align-content는 내부 요소 전체가 공백 없이 붙음
-  - space-between
-  - space-around
-  - space-evenly
+웹 사이트가 공유될 때 유용한 정보.
 
-를 통하여 간격 조절도 가능
+웹페이지의 주소를 페이스북이나 카카오톡 등의 SNS 계정으로 공유할 때 보여지는 웹사이트 제목과 섬네일 등의 기본 정보
 
-### gap
+```html
+<meta property="og:title" content="제목" />
+<meta property="og:description" content="설명" />
+<meta property="og:image" content="이미지 URL주소" />
+```
 
-내부 요소 사이에 들어가는 공백의 크기를 지정하는 것
+### favicon
 
-단위는 `em`을 사용
+```html
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+```
+
+## 시맨틱 태그
+
+https://www.w3schools.com/html/html5_semantic_elements.asp
+
+- main : 페이지마다 반드시 한 개만 존재
+
+TODO: 추후 만들 때 시맨틱 태그를 고려하면서 설계를 잘 해야하니 다시 살펴볼 것!
