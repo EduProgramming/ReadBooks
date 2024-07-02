@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order</title>
+    <style>
+      .flex-box {
+        display: flex;
+      }
+
+      .box {
+        width: 50px;
+        height: 30px;
+        text-align: center;
+        background-color: yellowgreen;
+        border: 1px solid gray;
+        align-content: center;
+      }
+
+      .box:last-of-type {
+        order: -1;
+      }
+
+      .box:nth-of-type(3) {
+        order: 1;
+      }
+      .box:nth-of-type(2) {
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <div class="flex-box">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

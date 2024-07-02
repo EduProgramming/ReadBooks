@@ -61,6 +61,18 @@ flex-direction이 column이면 jusitfy-content의 방향이 세로고, align-ite
 
 - nowrap (default)
 - wrap : 내부 요소가 부모 요소를 넘어서면 줄바꿈
+- wrap-reverse
+
+### flex-flow
+
+flex-direction과 flex-wrap을 동시에 사용할 수 있다.
+
+```css
+#pond {
+  display: flex;
+  flex-flow: column wrap;
+}
+```
 
 ### align-content
 
@@ -120,15 +132,11 @@ flex-shrink가 1로 지정되면 부모 요소 안에서 가능한 최개 길이
 
 대상을 현재 위치에서 조정하는 것
 
-.red 대상을 3번째 위치에 있는데 첫 번째 위치에 놓고 싶다고 하면
+기본이 0이고 이것보다 큰 값이면 뒤로 밀리고
 
-```css
-.red {
-  order: -2;
-}
-```
+같은 값이면 HTML태에서 그려지는 순서대로
 
-이렇게 조정해줘야 한다.
+음수도 가능하기에 -1이면 기본값보다 앞으로 놓이게 된다.
 
 ## 요소 감추는 방법
 
@@ -150,3 +158,55 @@ flex-shrink가 1로 지정되면 부모 요소 안에서 가능한 최개 길이
 ### 3. display
 
 - none : 자리차지도 없이 감춰짐. 흔적을 지우는 것이기에 마우스 이벤트 기능들도 안됨.
+
+---
+
+### jusitfy-
+
+#### justify-self
+
+- Grid item
+
+개별 아이템을 정렬하는데 사용
+
+그리드 레이아웃에서 주로 사용되며, 플랙스 레이아웃에서는 지원하지 않는다.
+
+#### justify-content
+
+- Grid item, Flex item
+
+컨테이너 내에서 각 그리드 아이템들을 정렬하는데 사용된다.
+
+모든 아이템에 동일한 정렬 규칙을 적용한다.
+
+#### justify-tracks
+
+- Grid item
+
+트랙(행/열)을 정렬하는데 사용
+
+표준화되지 않은 실험적인 기능
+
+### align-
+
+#### align-self
+
+- Grid item, Flex item
+
+개별 아이템을 정렬하는데 사용
+
+#### align-content
+
+- Grid item, Flex item
+
+플랙스 또는 그리드 컨테이너 내에서 여러 행(줄)을 정렬하는데 사용
+
+#### align-items
+
+- Grid item, Flex item
+
+플랙스 또는 그리드 컨테이너 내에서 모든 아이템 정렬하는데 사용
+
+#### align-tracks
+
+아직 실험적인 기능
