@@ -1,0 +1,22 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-container dl,
+.sr-only-container dd {
+  display: inline-block;
+  margin: 0;
+}
+
+.sr-only-container dd:not(:last-of-type)::after {
+  content: "|";
+  margin: 0 6px;
+}
