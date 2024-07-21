@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상 요소</title>
+  <style>
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li::before {
+      content: '✅';
+      display: inline-block;
+      margin: 0 0.4em;
+    }
+    li.later::after {
+      content: '다음 강좌';
+      margin-left: 0.6em;
+      padding: 0.16em 0.36em;
+      font-size: 0.72em;
+      font-weight: bold;
+      color: white;
+      background-color: darkmagenta;
+      border-radius: 0.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main>
+      <section>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li class="later">JS</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

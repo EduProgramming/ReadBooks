@@ -1,0 +1,15 @@
+@import url(./common.css);
+
+.not-good {
+  text-decoration: var(--not-good);
+}
+
+.wrong {
+  text-decoration: var(--wrong);
+}
+
+/* 스코프에 지정된 변수가 없을 경우 대안 값 넣기 */
+u {
+  background-color: var(--warn, lightblue);
+}
+

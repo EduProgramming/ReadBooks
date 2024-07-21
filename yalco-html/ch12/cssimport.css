@@ -1,0 +1,5 @@
+@import url('./shared.css');
+
+body {
+  background-color: var(--color-green);
+}

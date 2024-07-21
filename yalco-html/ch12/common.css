@@ -1,0 +1,15 @@
+/* 1. 모든 요소에서 사용될 수 있는 변수 */
+:root {
+  --font-small: 8px;
+   /* ... */
+}
+
+/* 2. 특정 요소에서만 사용될 수 있는 변수 */
+u {
+  --not-good: wavy underline orange;
+  --wrong: wavy underline red;
+}
+
+.wrong {
+  --warn: yellow;
+}
