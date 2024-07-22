@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid 테스트 문제</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 200px 1fr 300px;
+      grid-template-rows: 1fr 1fr 4.5fr 1fr;
+      gap: 12px;
+    }
+    .container > * {
+      border: 1px solid darkgray;
+    }
+    nav {
+      background-color: blanchedalmond;
+      grid-column: 1 / -1;
+      min-height: 102px;
+    }
+    aside {
+      grid-row: 2 / 2 span;
+      background-color: lightgray;
+    }
+    .sec-1 {
+      grid-column: 2 / 2 span;
+    }
+    .sec-2 {
+      background-color: lightcyan;
+    }
+    footer {
+      grid-column: 1 / 4;
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+    <section class="sec-1">Sec-1</section>
+    <section class="sec-2">Sec-2</section>
+    <section class="sec-3">Sec-3</section>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

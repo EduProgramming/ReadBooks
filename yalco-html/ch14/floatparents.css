@@ -1,0 +1,38 @@
+section {
+  margin-bottom: 2rem;
+}
+
+.parent {
+  padding: 1rem;
+  background-color: gray;
+}
+
+.box {
+  height: 200px;
+}
+
+.red {
+  width: 200px;
+  background-color: tomato;
+  float: left;
+}
+
+.green {
+  width: calc(100% - 200px);
+  background-color: green;
+  float: left;
+}
+
+section.ex1 .empty {
+  clear: both;
+}
+
+section.ex2 .parent {
+  overflow: hidden;
+}
+
+section.ex3 .parent::after {
+  content: '';
+  clear: both;
+  display: block;
+}
