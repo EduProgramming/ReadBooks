@@ -70,12 +70,11 @@ section.ex2 .parent {
 }
 
 section.ex3 .parent::after {
-  content: '';
+  content: "";
   clear: both;
   display: block;
 }
 ```
-
 
 ## Grid
 
@@ -87,7 +86,6 @@ section.ex3 .parent::after {
 
 - grid-template-columns: 열
 - grid-template-rows: 행
-
 
 **justify-items 속성**
 
@@ -117,7 +115,6 @@ grid-column은 열. grid-row는 행
 
 개별 요소이기에 `-self`로 정렬
 
-
 > **Flex레이아웃과 Grid레이아웃 중 무엇을 사용하면 되는가?**
 >
 > Flex 레이아웃이 가로/세로 방향 택한 뒤 자식 요소들의 배치를 조절하는 것이라면, Grid레이아웃은 가로, 세로까지의 하나의 부모 안에서 전박적으로 통제하는 모습
@@ -131,3 +128,86 @@ grid-column은 열. grid-row는 행
 https://showcases.yalco.kr/html-css-scoop/04-10/01.html
 https://showcases.yalco.kr/html-css-scoop/04-10/02.html
 https://showcases.yalco.kr/html-css-scoop/04-10/03.html
+
+### transform
+
+#### scale
+
+요소의 배율을 지정
+
+`transform: scale(2);` 2배 크기로, `transform: scale(0.5, 0.3);` 가로는 0.5배, 세로는 0.3배 비율로
+
+#### rotate
+
+요소를 회전
+
+tum이라는 단위를 사용해도 되는데 1tum은 360도(=360deg).
+
+#### translate
+
+괄호 안에 있는 숫자만큼 해당 이미지의 위치를 옮김.
+
+#### skew
+
+요소를 기울이기
+
+rotate처럼 각도를 줄 수 있으며 x, y축을 인자로 줘야하며, skewX, skewY를 통하여 각각 줄수도 있다.
+
+### transition
+
+변화되는 속성을 어떤 방식으로 적용할 것인지 결정
+
+`transition: 속성 지속시간 시간함수 지연시간;
+
+- linear: 객체를 일정한 속도로 움직이게 하는 속성
+- ease-in: 천천히 가다가 빨리
+- ease-out: 빨리 가다가 천천히
+- ease-in-out: 천천히 출발해 빨리 이동하다가 다시 천천히 마무리
+
+움직이는 속도를 `cubic-bezier()`함수를 이용해 커스터마이징할 수도 있다.
+
+https://cubic-bezier.com
+
+### animation
+
+외부 요인과 상관없이 객체에 어떤 변화를 줄지를 수동으로 지정
+
+`@keyframe`을 사용
+
+```css
+@keyframes animation-test {
+  /* 시작 0% */
+  from {
+    left: 36px;
+    border-radius: 0;
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  /* 중간 과정 */
+  67% {
+    transform: scale(2) rotate(540deg);
+    border-radius: 10%;
+    opacity: 1;
+  }
+
+  /* 끝 100% */
+  to {
+    left: 600px;
+    border-radius: 100%;
+    transform: scale(0.25) rotate(1000deg);
+    opacity: 0;
+  }
+}
+
+.ex2 .box {
+  animation-name: animation-test;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: 3;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-direction: alternate;
+}
+```
